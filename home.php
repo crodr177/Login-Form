@@ -1,6 +1,7 @@
 <?php include 'db/db.php'; ?>
 <?php include 'db/create_acc_query.php'; ?>
 <?php include 'db/login_query.php'; ?>
+<?php include 'functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,7 @@
 <body>
   <div class="container">
     <?php
-      displayError();
-    ?>
-    <?php
-      displayUsername();
+      loginOrCreate();
     ?>
     <h2>You're in!</h2>
     <a href='index.php'><button class="logout button">Log out</button></a>

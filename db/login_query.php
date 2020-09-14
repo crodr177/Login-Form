@@ -13,17 +13,14 @@
       die('Query FAILED' . mysqli_error($connection));
     }
 
-    $row = mysqli_fetch_assoc($result);
-    if($row == []) {
-      function displayError(){
+    function displayError(){
       echo '<h2>Wrong username or password</h2>';
       echo "<a href='login.php'><button class='back button'>Go Back</button></a>";
-      }
-    } else {
-      function displayUsername(){
-        global $username;
-        echo "<h1>$username</h1>";
-      }
+    }
+
+    function displayUsername(){
+      global $username;
+      echo "<h1>$username</h1>";
     }
   }
 ?>
